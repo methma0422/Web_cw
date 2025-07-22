@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('isbn');
             $table->decimal('price', 8, 2);
             $table->integer('quantity');
+            $table->foreignId('branch_id')->constrained('branches')->cascadeOnDelete();
             $table->timestamps();
         });
     }

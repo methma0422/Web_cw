@@ -37,6 +37,15 @@
                     <label for="bookQuantity">Quantity</label>
                     <input type="number" name="quantity" value="{{$book->quantity}}" class="form-control" id="bookQuantity" placeholder="Enter the quantity">
                 </div>
+                <div class="form-group mb-3">
+                    <label for="bookBranch">Branch</label>
+                    <select name="branch_id" class="form-control" id="bookBranch">
+                        <option value="">-- Select Branch --</option>
+                        @foreach($branches as $branch)
+                            <option value="{{ $branch->id }}">{{ $branch->name }}</option>
+                        @endforeach
+                    </select>
+                </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>

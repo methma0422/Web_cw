@@ -19,6 +19,7 @@
                     <th>ISBN</th>
                     <th>Price</th>
                     <th>Quantity</th>
+                    <th>Branch</th>
                     <th>Actions</th>
                 </tr>
                 </thead>
@@ -30,6 +31,7 @@
                         <td>{{$book->isbn}}</td>
                         <td>{{$book->price}}</td>
                         <td>{{$book->quantity}}</td>
+                        <td>{{$book->branch->name ?? 'N\A'}}</td>
                         <td>
                             <a href="{{'/books/'.$book->id}}" class="btn btn-sm btn-primary">Edit</a>
                             <a href="{{'/books/delete/'.$book->id}}" class="btn btn-sm btn-danger">Delete</a>

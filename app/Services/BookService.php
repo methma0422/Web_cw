@@ -13,12 +13,12 @@ class BookService
             'isbn'=>$data['isbn'],
             'price'=>$data['price'],
             'quantity'=>$data['quantity'],
+            'branch_id'=>$data['branch_id'],
         ];
         Book::create($book_data);
     }
     public function getAll(){
-        $books=Book::all();
-        return $books;
+        return Book::with('branch')->get();
     }
     public function findById($id){
         $book=Book::find($id);
@@ -32,6 +32,7 @@ class BookService
         $book->isbn=$data['isbn'];
         $book->price=$data['price'];
         $book->quantity=$data['quantity'];
+        $book->branch_id=$data['branch_id'];
         $book->save();
     }
     public function delete($id){
