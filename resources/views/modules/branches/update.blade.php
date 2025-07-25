@@ -26,7 +26,7 @@
                     <input type="text" name="province" value="{{$branch->province}}" class="form-control" id="branchProvince" placeholder="Enter the province">
                 </div>
                 <div class="form-group mb-3">
-                    <label for="branchDistrict">ISBN</label>
+                    <label for="branchDistrict">District</label>
                     <input type="text" name="district" value="{{$branch->district}}" class="form-control" id="branchDistrict" placeholder="Enter the district">
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
